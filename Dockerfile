@@ -16,4 +16,4 @@ EXPOSE 8080
 
 CMD /usr/local/tomcat/bin/catalina.sh run
 
-ADD /mnt/Tomcat/index.html  /usr/local/tomcat/webapps/ 
+ADD /var/lib/jenkins/workspace/Pipeline-Tomcat/index.html  /usr/local/tomcat/webapps/ 
