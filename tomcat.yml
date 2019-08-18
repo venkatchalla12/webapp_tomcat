@@ -1,0 +1,10 @@
+---
+- hosts: Demo
+  tasks:
+  - name: pull docker image 
+    raw: docker pull venkatchalla122/dev1:tomcat 
+  - name: remove container if exist
+    raw: docker rm -f tomcatapp
+    ignore_errors: true
+  - name: creation docker container
+    raw: docker run -dti --name  tomcatapp -p 8080:80 venkatchalla122/dev1:tomcat 
